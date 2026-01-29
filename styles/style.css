@@ -243,6 +243,10 @@ a:focus-visible {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .section.advice {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+
   .section.images {
     gap: 20px;
   }
@@ -260,8 +264,7 @@ a:focus-visible {
     grid-column: 1 / 4;
   }
 
-  .concentration > :not(.section__title),
-  .advice > :not(.section__title) {
+  .concentration > :not(.section__title) {
     grid-column: 2 / 4;
   }
 
@@ -297,6 +300,14 @@ a:focus-visible {
     --main-min-block-size: 768px;
     --menu-direction: row;
     --menu-justify-content: center;
+  }
+
+  .section.advice {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .advice > :not(.section__title) {
+    grid-column: 2 / 4;
   }
 
   .problems .article {
