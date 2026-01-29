@@ -150,6 +150,10 @@
   font-weight: var(--font-weight-regular);
 }
 
+.section.images {
+  gap: 10px;
+}
+
 .image {
   display: block;
   object-fit: cover;
@@ -184,7 +188,7 @@
   border-inline-end: 1px solid var(--menu-color);
   border-block-start: 1px solid var(--menu-color);
   inset-inline-end: var(--main-padding);
-  inset-block-start: calc(var(--footer-margin) + var(--main-padding));
+  inset-block-start: var(--main-padding);
   inline-size: 25px;
   block-size: 25px;
 }
