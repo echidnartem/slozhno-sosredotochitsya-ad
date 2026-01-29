@@ -163,7 +163,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: var(--footer-padding);
+  margin-top: var(--footer-margin);
   text-align: center;
   min-block-size: var(--main-min-block-size);
 }
@@ -184,7 +184,7 @@
   border-inline-end: 1px solid var(--menu-color);
   border-block-start: 1px solid var(--menu-color);
   inset-inline-end: var(--main-padding);
-  inset-block-start: calc(var(--footer-padding) + var(--main-padding));
+  inset-block-start: calc(var(--footer-margin) + var(--main-padding));
   inline-size: 25px;
   block-size: 25px;
 }
@@ -209,11 +209,11 @@ a:focus-visible {
 
     --title-margin-top: 173px;
     --title-margin-bottom: 162px;
+    --footer-margin: 60px;
     --main-padding: 20px;
     --section-padding: 80px;
-    --footer-padding: 60px;
     --menu-padding: 192px;
-    --main-min-block-size: 1080px;
+    --main-min-block-size: 1024px;
     --section-display: grid;
   }
 
