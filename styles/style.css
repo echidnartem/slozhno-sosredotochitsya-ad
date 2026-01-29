@@ -1,5 +1,289 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  color: var(--main-color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-main);
+  word-spacing: 0.4em;
+  background-color: var(--background-color);
+  max-block-size: 100%;
+  max-inline-size: 100%;
+}
+
+.header {
+  position: relative;
+  padding: 0 var(--main-padding);
+  background-image: var(--path-background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-block-size: var(--main-min-block-size);
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: var(--menu-justify-content);
+  padding-left: var(--main-padding);
+}
+
+.header__theme-menu-button {
+  border: none;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  background-color: transparent;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color-rgba);
+  outline-offset: 2px;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: var(--menu-direction);
+  gap: 10px;
+  padding-top: var(--menu-padding);
+}
+
+.header__rec-top {
+  position: absolute;
+  display: var(--rec-display);
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  inset-inline-end: var(--main-padding);
+  inset-block-start: var(--main-padding);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header__rec-top::before {
+  content: "REC";
+  position: absolute;
+  color: var(--accent-color);
+  inset-inline-end: 26px;
+  inset-block-start: 3px;
+}
+
+.header__rec-top::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  inset-block-start: 8px;
+  inset-inline-end: 8px;
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.rec-bottom {
+  position: absolute;
+  display: var(--rec-display);
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  inset-inline-start: var(--main-padding);
+  inset-block-end: var(--main-padding);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.title-decor {
+  display: block;
+  color: var(--subtitle-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-main);
+  line-height: 23.4px;
+  background-color: var(--accent-color);
+}
+
+.header__title {
+  display: block;
+  margin: var(--title-margin-top) 0 var(--title-margin-bottom);
+  color: var(--title-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-title);
+  line-height: 83%;
+  letter-spacing: 0%;
+  text-transform: lowercase;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  word-spacing: 0.4em;
+}
+
+.main {
+  padding: 0 var(--main-padding);
+}
+
+.section {
+  display: var(--section-display);
+  flex-direction: column;
+  gap: 20px;
+  padding-top: var(--section-padding);
+}
+
+.section__title {
+  color: var(--section-title-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-main);
+}
+
+.article__content {
+  padding-top: 10px;
+}
+
+.no-bold {
+  font-weight: var(--font-weight-regular);
+}
+
+.image {
+  display: block;
+  object-fit: cover;
+  object-position: center; 
+  inline-size: 100%; 
+  block-size: 100%;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--footer-padding);
+  text-align: center;
+  min-block-size: var(--main-min-block-size);
+}
+
+.footer__title {
+  display: block;
+  color: var(--title-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-title);
+  line-height: 83%;
+  letter-spacing: 0%;
+  text-transform: lowercase;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.footer__rec-top {
+  position: absolute;
+  display: var(--rec-display);
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  inset-inline-end: var(--main-padding);
+  inset-block-start: calc(var(--footer-padding) + var(--main-padding));
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 1px solid var(--main-color);
+  outline-offset: 2px;
+}
+
+@media (width >= 768px) {
+  :root {
+    --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+
+    --title-margin-top: 173px;
+    --title-margin-bottom: 162px;
+    --main-padding: 20px;
+    --section-padding: 80px;
+    --menu-padding: 192px;
+    --main-min-block-size: 1080px;
+    --section-display: grid;
+  }
+
+  .header {
+    padding-left: 0;
+  }
+
+  .header__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: var(--main-padding);
+  }
+
+  .header__content .title-decor {
+    grid-column: 2;
+  }
+
+  .section {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .concentration .article {
+    grid-column: 2;
+  }
+
+  .concentration .section__title,
+  .advice .section__title {
+    grid-row: 1 / 7;
+  }
+
+  .problems .article,
+  .images .title-decor {
+    grid-column: 1 / 4;
+  }
+
+  .advice > :not(.section__title) {
+    grid-column: 2 / 4;
+  }
+
+  .images img:nth-of-type(1) {
+    grid-column: 1 / 3;
+  }
+
+  .images img:nth-of-type(2) {
+    grid-column: 3;
+    grid-row: 2 / 4;
+  }
+
+  .images img:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 3 / 5;
+  }
+
+  .images img:nth-of-type(4) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .images img:nth-of-type(5) {
+    grid-column: 2 / 4;
+  }
+}
+
+@media (width >= 1024px) {
+  :root {
+    --title-margin-top: 319px;
+    --title-margin-bottom: 114px;
+    --menu-padding: 20px; 
+    --main-min-block-size: 768px;
+    --menu-direction: row;
+    --menu-justify-content: center;
+  }
+
+  .problems .article {
+    grid-column: auto;
+    grid-row: 2;
+  }
 }
