@@ -1,11 +1,12 @@
 :root.theme-light {
   --accent-color: #FF8DCB;
-  --accent-color-rgba: rgba(255, 141, 203, 0.4);
+  --accent-color-rgba: rgba(53, 52, 48, 0.4);
   --main-color: #353430;
   --title-color: #FFC2E6;
-  --subtitle-color: #353430;
-  --section-title-color: #353430;
-  --background-color: #FFF1F7;
+  --subtitle-color: var(--main-color);
+  --section-title-color: var(--main-color);
+  --menu-color: var(--main-color);
+  --background-color: var(--title-color);
 
   --rec-display: none;
   --path-background-image: url("../images/cover-image-light.png");
@@ -17,9 +18,10 @@
     --accent-color-rgba: rgba(255, 141, 203, 0.4);
     --main-color: #353430;
     --title-color: #FFC2E6;
-    --subtitle-color: #353430;
-    --section-title-color: #353430;
-    --background-color: #FFF1F7;
+    --subtitle-color: var(--main-color);
+    --section-title-color: var(--main-color);
+    --menu-color: var(--main-color);
+    --background-color: var(--title-color);
 
     --rec-display: none;
     --path-background-image: url("../images/cover-image-light.png");

@@ -27,13 +27,13 @@
 
 .header__theme-menu-button {
   border: none;
-  color: var(--accent-color);
+  color: var(--menu-color);
   text-transform: lowercase;
   background-color: transparent;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--menu-color);
   outline-offset: 2px;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--menu-color);
   outline: none;
 }
 
@@ -56,9 +56,8 @@
 
 .header__rec-top {
   position: absolute;
-  display: var(--rec-display);
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--menu-color);
+  border-block-start: 1px solid var(--menu-color);
   inset-inline-end: var(--main-padding);
   inset-block-start: var(--main-padding);
   inline-size: 25px;
@@ -68,18 +67,19 @@
 .header__rec-top::before {
   content: "REC";
   position: absolute;
-  color: var(--accent-color);
+  display: var(--rec-display);
+  color: var(--menu-color);
   inset-inline-end: 26px;
-  inset-block-start: 3px;
+  inset-block-start: 3px; 
 }
 
 .header__rec-top::after {
   content: '';
   position: absolute;
-  display: inline-block;
+  display: var(--rec-display);
   border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color);
-  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--menu-color);
+  background-color: var(--menu-color);
   inset-block-start: 8px;
   inset-inline-end: 8px;
   inline-size: 9px;
@@ -88,9 +88,8 @@
 
 .rec-bottom {
   position: absolute;
-  display: var(--rec-display);
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--menu-color);
+  border-block-end: 1px solid var(--menu-color);
   inset-inline-start: var(--main-padding);
   inset-block-end: var(--main-padding);
   inline-size: 25px;
@@ -135,6 +134,10 @@
   font-size: var(--font-size-main);
 }
 
+.article {
+  line-height: 23.4px;
+}
+
 .article__content {
   padding-top: 10px;
 }
@@ -174,9 +177,8 @@
 
 .footer__rec-top {
   position: absolute;
-  display: var(--rec-display);
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--menu-color);
+  border-block-start: 1px solid var(--menu-color);
   inset-inline-end: var(--main-padding);
   inset-block-start: calc(var(--footer-padding) + var(--main-padding));
   inline-size: 25px;
@@ -228,10 +230,6 @@ a:focus-visible {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .concentration .article {
-    grid-column: 2;
-  }
-
   .concentration .section__title,
   .advice .section__title {
     grid-row: 1 / 7;
@@ -242,6 +240,7 @@ a:focus-visible {
     grid-column: 1 / 4;
   }
 
+  .concentration > :not(.section__title),
   .advice > :not(.section__title) {
     grid-column: 2 / 4;
   }
@@ -272,7 +271,7 @@ a:focus-visible {
 
 @media (width >= 1024px) {
   :root {
-    --title-margin-top: 319px;
+    --title-margin-top: 273px;
     --title-margin-bottom: 114px;
     --menu-padding: 20px;
     --main-min-block-size: 768px;

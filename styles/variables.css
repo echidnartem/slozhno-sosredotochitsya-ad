@@ -4,8 +4,9 @@
   --main-color: #F1B2CE;
   --title-color: #DB00FF;
   --subtitle-color: #000028;
-  --section-title-color: #FF0070;
-  --background-color: #000028;
+  --section-title-color: var(--accent-color);
+  --menu-color: var(--accent-color);
+  --background-color: var(--subtitle-color);
 
   --font-family: 'IBM Plex mono', sans-serif;
   --font-size-main: 18px;
