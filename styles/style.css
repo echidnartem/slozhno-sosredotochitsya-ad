@@ -3,8 +3,12 @@
   font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-main);
-  word-spacing: 0.4em;
   background-color: var(--background-color);
+  background-image: var(--path-background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   max-block-size: 100%;
   max-inline-size: 100%;
 }
@@ -12,11 +16,6 @@
 .header {
   position: relative;
   padding: 0 var(--main-padding);
-  background-image: var(--path-background-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   min-block-size: var(--main-min-block-size);
 }
 
@@ -117,7 +116,6 @@
   letter-spacing: 0%;
   text-transform: lowercase;
   text-shadow: 4px 4px 0 var(--accent-color);
-  word-spacing: 0.4em;
 }
 
 .main {
@@ -148,8 +146,8 @@
 .image {
   display: block;
   object-fit: cover;
-  object-position: center; 
-  inline-size: 100%; 
+  object-position: center;
+  inline-size: 100%;
   block-size: 100%;
 }
 
@@ -276,7 +274,7 @@ a:focus-visible {
   :root {
     --title-margin-top: 319px;
     --title-margin-bottom: 114px;
-    --menu-padding: 20px; 
+    --menu-padding: 20px;
     --main-min-block-size: 768px;
     --menu-direction: row;
     --menu-justify-content: center;
