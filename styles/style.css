@@ -243,6 +243,10 @@ a:focus-visible {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .section.images {
+    gap: 20px;
+  }
+
   .concentration .section__title {
     grid-row: 1 / 3;
   }
