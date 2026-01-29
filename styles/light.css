@@ -6,7 +6,7 @@
   --subtitle-color: var(--main-color);
   --section-title-color: var(--main-color);
   --menu-color: var(--main-color);
-  --background-color: var(--title-color);
+  --background-color: #FFEEF6;
 
   --rec-display: none;
   --path-background-image: url("../images/cover-image-light.png");

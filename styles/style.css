@@ -121,6 +121,10 @@
   padding: 0 var(--main-padding);
 }
 
+.main .section:first-of-type {
+  padding-top: 40px;
+}
+
 .section {
   display: var(--section-display);
   flex-direction: column;
@@ -207,6 +211,7 @@ a:focus-visible {
     --title-margin-bottom: 162px;
     --main-padding: 20px;
     --section-padding: 80px;
+    --footer-padding: 60px;
     --menu-padding: 192px;
     --main-min-block-size: 1080px;
     --section-display: grid;
