@@ -1,21 +1,39 @@
 # Сложно сосредоточиться
 
-Страница-статья о концентрации внимания с переключением тем. Учебный проект по работе с CSS-переменными и адаптивной вёрсткой.
+A responsive article about the causes of poor concentration and practical ways to improve focus.
 
----
+This study project explores adaptive layouts, reusable CSS custom properties, fluid typography, and theme switching. The interface supports light, dark, and automatic themes while preserving the user’s explicit choice between sessions.
 
-## 📋 О проекте
+## Features
 
-Проект представляет собой одностраничный сайт-статью на тему "Почему нам сложно сосредоточиться". Главная особенность — возможность переключать цветовые темы (светлая, тёмная, авто) с сохранением выбора в `localStorage`.
+- Light, dark, and system-based color themes
+- Theme preference saved in LocalStorage
+- Responsive layouts for mobile, tablet, and desktop screens
+- Adaptive article sections built with CSS Grid
+- Responsive image gallery
+- Fluid typography with `clamp()`
+- Accessible interactive states
 
-JavaScript-код для переключения тем был предоставлен в готовом виде. Моя задача заключалась в вёрстке адаптивного интерфейса по макету Figma и настройке всех стилей через CSS-переменные (custom properties).
+## Tech Stack
 
-**Особенность:** проект полностью построен на CSS-переменных, что позволяет менять всю цветовую гамму сайта простым изменением значений в корневом селекторе. Реализована адаптивная вёрстка под три брейкпоинта (мобильные, планшеты, десктопы) с использованием CSS Grid.
+- HTML5
+- CSS3
+- JavaScript
+- CSS Variables
+- CSS Grid
+- LocalStorage
+- BEM
+- Figma
 
-## 🛠 Технологический стек
+## Getting Started
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![CSS Variables](https://img.shields.io/badge/CSS_Variables-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+No build step is required. Clone the repository and open `index.html` in a browser.
+
+```bash
+git clone https://github.com/echidnartem/slozhno-sosredotochitsya-ad.git
+cd slozhno-sosredotochitsya-ad
+```
+
+## Design
+
+The interface was implemented from a Figma layout provided by Yandex Practicum.
